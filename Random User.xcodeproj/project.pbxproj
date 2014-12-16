@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CCFB04C1A3FFDC10089A1FE /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFB04B1A3FFDC10089A1FE /* KVNProgress.m */; };
+		3CCFB0511A3FFE800089A1FE /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFB04E1A3FFE800089A1FE /* UIImage+KVNEmpty.m */; };
+		3CCFB0521A3FFE800089A1FE /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFB0501A3FFE800089A1FE /* UIImage+KVNImageEffects.m */; };
+		3CCFB0541A3FFEE30089A1FE /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CCFB0531A3FFEE30089A1FE /* KVNProgressView.xib */; };
 		3CF994EF1A3E0C2100AFEDEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF994EE1A3E0C2100AFEDEB /* main.m */; };
 		3CF994F21A3E0C2100AFEDEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF994F11A3E0C2100AFEDEB /* AppDelegate.m */; };
 		3CF994F51A3E0C2100AFEDEB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF994F41A3E0C2100AFEDEB /* ViewController.m */; };
@@ -14,6 +18,15 @@
 		3CF994FA1A3E0C2100AFEDEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CF994F91A3E0C2100AFEDEB /* Images.xcassets */; };
 		3CF994FD1A3E0C2100AFEDEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF994FB1A3E0C2100AFEDEB /* LaunchScreen.xib */; };
 		3CF995091A3E0C2100AFEDEB /* Random_UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF995081A3E0C2100AFEDEB /* Random_UserTests.m */; };
+		3CF995271A3E1C1500AFEDEB /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF995191A3E1C1500AFEDEB /* FAKFontAwesome.m */; };
+		3CF995281A3E1C1500AFEDEB /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9951B1A3E1C1500AFEDEB /* FAKFoundationIcons.m */; };
+		3CF995291A3E1C1500AFEDEB /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9951D1A3E1C1500AFEDEB /* FAKIcon.m */; };
+		3CF9952A1A3E1C1500AFEDEB /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9951F1A3E1C1500AFEDEB /* FAKIonIcons.m */; };
+		3CF9952B1A3E1C1500AFEDEB /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF995211A3E1C1500AFEDEB /* FAKZocial.m */; };
+		3CF9952C1A3E1C1500AFEDEB /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3CF995221A3E1C1500AFEDEB /* FontAwesome.otf */; };
+		3CF9952D1A3E1C1500AFEDEB /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CF995241A3E1C1500AFEDEB /* foundation-icons.ttf */; };
+		3CF9952E1A3E1C1500AFEDEB /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CF995251A3E1C1500AFEDEB /* ionicons.ttf */; };
+		3CF9952F1A3E1C1500AFEDEB /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CF995261A3E1C1500AFEDEB /* zocial-regular-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CCFB04A1A3FFDC10089A1FE /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
+		3CCFB04B1A3FFDC10089A1FE /* KVNProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgress.m; sourceTree = "<group>"; };
+		3CCFB04D1A3FFE800089A1FE /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
+		3CCFB04E1A3FFE800089A1FE /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
+		3CCFB04F1A3FFE800089A1FE /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
+		3CCFB0501A3FFE800089A1FE /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
+		3CCFB0531A3FFEE30089A1FE /* KVNProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVNProgressView.xib; sourceTree = "<group>"; };
 		3CF994E91A3E0C2100AFEDEB /* Random User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF994ED1A3E0C2100AFEDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CF994EE1A3E0C2100AFEDEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +60,21 @@
 		3CF995021A3E0C2100AFEDEB /* Random UserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Random UserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF995071A3E0C2100AFEDEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CF995081A3E0C2100AFEDEB /* Random_UserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Random_UserTests.m; sourceTree = "<group>"; };
+		3CF995181A3E1C1500AFEDEB /* FAKFontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFontAwesome.h; sourceTree = "<group>"; };
+		3CF995191A3E1C1500AFEDEB /* FAKFontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFontAwesome.m; sourceTree = "<group>"; };
+		3CF9951A1A3E1C1500AFEDEB /* FAKFoundationIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFoundationIcons.h; sourceTree = "<group>"; };
+		3CF9951B1A3E1C1500AFEDEB /* FAKFoundationIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFoundationIcons.m; sourceTree = "<group>"; };
+		3CF9951C1A3E1C1500AFEDEB /* FAKIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIcon.h; sourceTree = "<group>"; };
+		3CF9951D1A3E1C1500AFEDEB /* FAKIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIcon.m; sourceTree = "<group>"; };
+		3CF9951E1A3E1C1500AFEDEB /* FAKIonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIonIcons.h; sourceTree = "<group>"; };
+		3CF9951F1A3E1C1500AFEDEB /* FAKIonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIonIcons.m; sourceTree = "<group>"; };
+		3CF995201A3E1C1500AFEDEB /* FAKZocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKZocial.h; sourceTree = "<group>"; };
+		3CF995211A3E1C1500AFEDEB /* FAKZocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKZocial.m; sourceTree = "<group>"; };
+		3CF995221A3E1C1500AFEDEB /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		3CF995231A3E1C1500AFEDEB /* FontAwesomeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesomeKit.h; sourceTree = "<group>"; };
+		3CF995241A3E1C1500AFEDEB /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "foundation-icons.ttf"; sourceTree = "<group>"; };
+		3CF995251A3E1C1500AFEDEB /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		3CF995261A3E1C1500AFEDEB /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +95,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CCFB0491A3FFDA70089A1FE /* KVNProgress */ = {
+			isa = PBXGroup;
+			children = (
+				3CCFB0531A3FFEE30089A1FE /* KVNProgressView.xib */,
+				3CCFB04D1A3FFE800089A1FE /* UIImage+KVNEmpty.h */,
+				3CCFB04E1A3FFE800089A1FE /* UIImage+KVNEmpty.m */,
+				3CCFB04F1A3FFE800089A1FE /* UIImage+KVNImageEffects.h */,
+				3CCFB0501A3FFE800089A1FE /* UIImage+KVNImageEffects.m */,
+				3CCFB04A1A3FFDC10089A1FE /* KVNProgress.h */,
+				3CCFB04B1A3FFDC10089A1FE /* KVNProgress.m */,
+			);
+			name = KVNProgress;
+			sourceTree = "<group>";
+		};
 		3CF994E01A3E0C2100AFEDEB = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +130,8 @@
 		3CF994EB1A3E0C2100AFEDEB /* Random User */ = {
 			isa = PBXGroup;
 			children = (
+				3CCFB0491A3FFDA70089A1FE /* KVNProgress */,
+				3CF995171A3E1C1500AFEDEB /* FontAwesomeKit */,
 				3CF994F01A3E0C2100AFEDEB /* AppDelegate.h */,
 				3CF994F11A3E0C2100AFEDEB /* AppDelegate.m */,
 				3CF994F31A3E0C2100AFEDEB /* ViewController.h */,
@@ -117,6 +168,28 @@
 				3CF995071A3E0C2100AFEDEB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CF995171A3E1C1500AFEDEB /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				3CF995181A3E1C1500AFEDEB /* FAKFontAwesome.h */,
+				3CF995191A3E1C1500AFEDEB /* FAKFontAwesome.m */,
+				3CF9951A1A3E1C1500AFEDEB /* FAKFoundationIcons.h */,
+				3CF9951B1A3E1C1500AFEDEB /* FAKFoundationIcons.m */,
+				3CF9951C1A3E1C1500AFEDEB /* FAKIcon.h */,
+				3CF9951D1A3E1C1500AFEDEB /* FAKIcon.m */,
+				3CF9951E1A3E1C1500AFEDEB /* FAKIonIcons.h */,
+				3CF9951F1A3E1C1500AFEDEB /* FAKIonIcons.m */,
+				3CF995201A3E1C1500AFEDEB /* FAKZocial.h */,
+				3CF995211A3E1C1500AFEDEB /* FAKZocial.m */,
+				3CF995221A3E1C1500AFEDEB /* FontAwesome.otf */,
+				3CF995231A3E1C1500AFEDEB /* FontAwesomeKit.h */,
+				3CF995241A3E1C1500AFEDEB /* foundation-icons.ttf */,
+				3CF995251A3E1C1500AFEDEB /* ionicons.ttf */,
+				3CF995261A3E1C1500AFEDEB /* zocial-regular-webfont.ttf */,
+			);
+			path = FontAwesomeKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +272,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF9952E1A3E1C1500AFEDEB /* ionicons.ttf in Resources */,
 				3CF994F81A3E0C2100AFEDEB /* Main.storyboard in Resources */,
 				3CF994FD1A3E0C2100AFEDEB /* LaunchScreen.xib in Resources */,
+				3CCFB0541A3FFEE30089A1FE /* KVNProgressView.xib in Resources */,
+				3CF9952F1A3E1C1500AFEDEB /* zocial-regular-webfont.ttf in Resources */,
+				3CF9952C1A3E1C1500AFEDEB /* FontAwesome.otf in Resources */,
 				3CF994FA1A3E0C2100AFEDEB /* Images.xcassets in Resources */,
+				3CF9952D1A3E1C1500AFEDEB /* foundation-icons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +297,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF995281A3E1C1500AFEDEB /* FAKFoundationIcons.m in Sources */,
+				3CCFB0521A3FFE800089A1FE /* UIImage+KVNImageEffects.m in Sources */,
 				3CF994F51A3E0C2100AFEDEB /* ViewController.m in Sources */,
+				3CF9952B1A3E1C1500AFEDEB /* FAKZocial.m in Sources */,
+				3CF995271A3E1C1500AFEDEB /* FAKFontAwesome.m in Sources */,
 				3CF994F21A3E0C2100AFEDEB /* AppDelegate.m in Sources */,
+				3CCFB04C1A3FFDC10089A1FE /* KVNProgress.m in Sources */,
 				3CF994EF1A3E0C2100AFEDEB /* main.m in Sources */,
+				3CCFB0511A3FFE800089A1FE /* UIImage+KVNEmpty.m in Sources */,
+				3CF995291A3E1C1500AFEDEB /* FAKIcon.m in Sources */,
+				3CF9952A1A3E1C1500AFEDEB /* FAKIonIcons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +498,7 @@
 				3CF9950E1A3E0C2100AFEDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CF9950F1A3E0C2100AFEDEB /* Build configuration list for PBXNativeTarget "Random UserTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +507,7 @@
 				3CF995111A3E0C2100AFEDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

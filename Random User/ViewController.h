@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#define LABEL_ROW_HEIGHT 140
+#define IMAGEVIEW_ROW_HEIGHT 400
 
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
