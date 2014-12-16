@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DCAC39DD-6CE3-4EA2-90E4-4EA77988BEE4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Random User</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B4067C80BDC2A4A72390091066AD2D0DF9482B29</key>
+		<string>github.com:jv17/Random-User.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Random User.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B4067C80BDC2A4A72390091066AD2D0DF9482B29</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jv17/Random-User.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B4067C80BDC2A4A72390091066AD2D0DF9482B29</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4067C80BDC2A4A72390091066AD2D0DF9482B29</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Random%20User</string>
+		</dict>
+	</array>
+</dict>
+</plist>
