@@ -1,6 +1,5 @@
-#Random User
+#[Random User - (Objective-C).](http://jv17.github.io/Random-User/)
 
-##[Random User - (Objective-C).](http://jv17.github.io/YoutubePlayer/)
 This a simple app in objective-c which loads random users with their information and display it nicely. This is app was develop and tested in iOS8 and for iPhone 5+ devices.
 
 ##Usage
@@ -14,4 +13,4 @@ I hope it is helpful to others and, you find it interesting. Cheers!
 
 Don't forget to visit **[My Website!](http://jorgedeveloper.com)** and **[My Blog!](http://jorgedeveloper.com/blog/)**
 
-####Thanks for visiting this repo and for more info on this repo [visit the repo website](http://jv17.github.io/YoutubePlayer/)...
+####Thanks for visiting this repo and for more info on this repo [visit the repo website](http://jv17.github.io/Random-User/)...
