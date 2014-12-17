@@ -70,6 +70,10 @@
 
 #pragma mark - API Request
 
+/**
+ * @brief: Makes the request to Random me API and gets a JSON as response.
+ * @return: The result is the JSON response is saved.
+ */
 -(void)ApiRequestWithURL:(NSString*)requestUrl andUsername:(NSString*)user andPassword:(NSString*)pass {
 
     NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",user,pass];
@@ -96,13 +100,16 @@
                                self.json = [NSJSONSerialization JSONObjectWithData:data 
                                                                       options:0
                                                                         error:nil];
-//                               NSLog(@"Async JSON: %@", self.json);
                            }];
     
 }
 
 #pragma mark - User Setters
 
+/**
+ * @brief: Gets user information from JSON dictionary.
+ * @return: The result we have a new user.
+ */
 -(void)getRandomUserInfo {
     
     if ([self.json isKindOfClass:[NSDictionary class]])
@@ -150,12 +157,22 @@
     }
 }
 
+
+/**
+ * @brief: Format first letter of a string in to a capitalizedString.
+ * @return: The result the new string with a capitalizedString.
+ */
 -(NSString*)capitalizeStringFromString:(NSString*)string {
     NSString *firstCapChar = [[string substringToIndex:1] capitalizedString];
     NSString *cappedString = [string stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstCapChar];
     return cappedString;
 }
 
+
+/**
+ * @brief: When JSON dictionary contains a user, we get the user info.
+ * @return: The result we have the new user info.
+ */
 -(void)getRandomUser {
     
     if(self.json != nil){
@@ -165,6 +182,11 @@
     }
 }
 
+
+/**
+ * @brief: Setups UI label, buttons and table view.
+ * @return: The result UI is setup.
+ */
 -(void)setupUI {
     
     self.titleLbl = [self myTitle];
@@ -442,6 +464,10 @@
 
 #pragma mark - UIView Animations
 
+/**
+ * @brief: Makes the button shake animation.
+ * @return: The result button shake animation.
+ */
 - (void)startShake:(UIView*)view
 {
     CGAffineTransform leftShake = CGAffineTransformMakeTranslation(-5, 0);
@@ -470,6 +496,11 @@
     }
 }
 
+
+/**
+ * @brief: Makes an underline animation to move to a button when this is pressed.
+ * @return: The result underline moves to pressed button.
+ */
 - (void)moveUnderline:(UIView*)view toOriginX:(CGFloat)originX
 {
     CGRect frame = self.underline.frame;
@@ -484,6 +515,11 @@
                      }];
 }
 
+
+/**
+ * @brief: Creates a small fade in animation to the user info label.
+ * @return: The result label fades in.
+ */
 -(void)fadeInLabel:(UILabel*)lbl {
     
     self.displayLbl.alpha = 0.0;

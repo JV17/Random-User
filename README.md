@@ -1,4 +1,4 @@
-#[Random User - (Objective-C).](http://jv17.github.io/Random-User/)
+#Random User - (Objective-C)
 
 This a simple app in objective-c which loads random users with their information and display it nicely. This is app was develop and tested in iOS8 and for iPhone 5+ devices.
 
