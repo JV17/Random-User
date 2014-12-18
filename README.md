@@ -13,7 +13,7 @@ This is a programming challenge app. It loads random user with some of their per
 **DONE!**
 
 ### Screenshot
-![preview](http://s2.postimg.org/mzitunfd3/randomuser.gif)
+![preview](Previews/randomuser.gif)
 
 ### Authors and Contributors
 Just myself @jv17, I decided to this programming challenge for fun and maybe help others who are doing the same.
