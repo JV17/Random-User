@@ -12,7 +12,7 @@ This is a programming challenge app. It loads random user with some of their per
 
 **DONE!**
 
-### Screenshot
+### Preview
 ![preview](Previews/randomuser.gif)
 
 ### Authors and Contributors
