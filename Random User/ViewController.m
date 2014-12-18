@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary *userInfo;
 
+@property (nonatomic, strong) UIAlertView *alert;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIView *line;
 @property (nonatomic, strong) UILabel *titleLbl;
@@ -32,6 +33,7 @@
 @property (nonatomic, strong) UIButton *user;
 @property (nonatomic, strong) UIView *underline;
 
+@property (nonatomic) BOOL loadingFail;
 @property (nonatomic) BOOL newRandomUser;
 @property (nonatomic) CGRect bounds;
 
@@ -44,16 +46,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // show HUD
-    [KVNProgress showSuccessWithStatus:@"Loading"];
+    [KVNProgress showSuccessWithStatus:@"New user"];
     
     self.bounds = [UIScreen mainScreen].bounds;
     self.userInfo = [[NSMutableDictionary alloc] init];
-    
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5
-                                                  target:self
-                                                selector:@selector(getRandomUser)
-                                                userInfo:nil
-                                                 repeats:YES];
     
     [self ApiRequestWithURL:@"http://api.randomuser.me/" andUsername:@"" andPassword:@""];
     
@@ -75,7 +71,7 @@
  * @return: The result is the JSON response is saved.
  */
 -(void)ApiRequestWithURL:(NSString*)requestUrl andUsername:(NSString*)user andPassword:(NSString*)pass {
-
+    
     NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",user,pass];
     
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
@@ -94,13 +90,28 @@
     
     [request setHTTPBody:postData];
     
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               self.json = [NSJSONSerialization JSONObjectWithData:data 
-                                                                      options:0
-                                                                        error:nil];
-                           }];
+    NSURLResponse* response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if(error) {
+        self.alert = [[UIAlertView alloc] initWithTitle:@"Loading Error" message:@"Sorry, at this moment a new user couldn't be loaded. Please make sure internet connection is available." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [self.alert show];
+        self.loadingFail = YES;
+        [self setupRefreshUI];
+        return;
+    }
+    
+    // in case it doesn't fail after a refresh is done
+    self.loadingFail = NO;
+    
+    // saving the data from API
+    self.json = [NSJSONSerialization JSONObjectWithData:data
+                                                options:0
+                                                  error:nil];
+    
+    // setting data for UI
+    [self getRandomUserInfo];
     
 }
 
@@ -135,7 +146,7 @@
                 NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
                 image = [UIImage imageWithData:imageData];
             }
-
+            
             // formatting user information
             title = [self capitalizeStringFromString:title];
             first = [self capitalizeStringFromString:first];
@@ -170,20 +181,6 @@
 
 
 /**
- * @brief: When JSON dictionary contains a user, we get the user info.
- * @return: The result we have the new user info.
- */
--(void)getRandomUser {
-    
-    if(self.json != nil){
-        [self getRandomUserInfo];
-        [self.timer invalidate];
-        self.timer = nil;
-    }
-}
-
-
-/**
  * @brief: Setups UI label, buttons and table view.
  * @return: The result UI is setup.
  */
@@ -211,10 +208,40 @@
     [KVNProgress dismiss];
 }
 
+/**
+ * @brief: Setups UI label, buttons and table view.
+ * @return: The result UI is setup.
+ */
+-(void)setupRefreshUI {
+    
+    self.titleLbl = [self myTitle];
+    _titleLbl.text = @"Loading Error!";
+    self.displayLbl = [self myLabel];
+    _displayLbl.frame = CGRectMake(0, 80, self.bounds.size.width, LABEL_ROW_HEIGHT);
+    _displayLbl.font = [UIFont fontWithName:@"HelveticaNeue" size:20];
+    _displayLbl.numberOfLines = 4;
+    _displayLbl.text = @"Please make sure you have internet connection, and try again pressing the refresh button in the top right corner of the screen.";
+    [self setAllIcons];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height) style:UITableViewStylePlain];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.bounces = NO;
+    self.tableView.scrollEnabled = NO;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.view addSubview:self.tableView];
+    
+    // Dismiss
+    [KVNProgress dismiss];
+}
+
+
 #pragma mark - Getter and Settr
 
 -(UIImageView*)myImageView {
-
+    
     if(!_imageView || _imageView != nil) {
         _imageView = [[UIImageView alloc] initWithImage:[self.userInfo valueForKey:@"picture"]];
         _imageView.frame = CGRectMake(self.bounds.size.width/2-100, 140, 200, 200);
@@ -295,6 +322,14 @@
     
     CGFloat originY = self.bounds.size.height-IMAGEVIEW_ROW_HEIGHT-LABEL_ROW_HEIGHT-40;
     
+    if(self.loadingFail) {
+        FAKFontAwesome *refreshIcon = [FAKFontAwesome refreshIconWithSize:28];
+        [refreshIcon addAttribute:NSForegroundColorAttributeName value:[UIColor lightGrayColor]];
+        UIImage *anotherUser = [refreshIcon imageWithSize:CGSizeMake(28, 28)];
+        self.user = [self createButton:self.user withTag:7 andFrame:CGRectMake(self.bounds.size.width*0.90, 30, 28, 28) andImage:anotherUser];
+        return;
+    }
+    
     FAKFontAwesome *userIcon = [FAKFontAwesome userIconWithSize:30];
     [userIcon addAttribute:NSForegroundColorAttributeName value:[UIColor lightGrayColor]];
     UIImage *userImage = [userIcon imageWithSize:CGSizeMake(30, 30)];
@@ -329,7 +364,7 @@
     [refreshIcon addAttribute:NSForegroundColorAttributeName value:[UIColor lightGrayColor]];
     UIImage *anotherUser = [refreshIcon imageWithSize:CGSizeMake(28, 28)];
     self.user = [self createButton:self.user withTag:7 andFrame:CGRectMake(self.bounds.size.width*0.90, 30, 28, 28) andImage:anotherUser];
-
+    
 }
 
 -(UIButton*)createButton:(UIButton*)sender withTag:(NSInteger)tag andFrame:(CGRect)frame andImage:(UIImage*)image{
@@ -347,6 +382,7 @@
     return sender;
 }
 
+
 #pragma mark - UITableView Delegate & Datasource
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -360,30 +396,41 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    if(indexPath.row == 0) {
-        [cell.contentView addSubview:self.titleLbl];
-        [cell.contentView addSubview:self.user];
-        [cell.contentView addSubview:self.line];
-        [cell.contentView addSubview:self.imageView];
-    }
-    else if (indexPath.row == 1) {
-        [cell.contentView addSubview:self.myLbl];
-        [cell.contentView addSubview:self.displayLbl];
+    if(self.loadingFail) {
+        if(indexPath.row == 0) {
+            [cell.contentView addSubview:self.titleLbl];
+            [cell.contentView addSubview:self.user];
+            [cell.contentView addSubview:self.displayLbl];
+        }
     }
     else {
-        [cell.contentView addSubview:self.name];
-        [cell.contentView addSubview:self.underline];
-        [cell.contentView addSubview:self.email];
-        [cell.contentView addSubview:self.dob];
-        [cell.contentView addSubview:self.address];
-        [cell.contentView addSubview:self.phone];
-        [cell.contentView addSubview:self.pass];
+        if(indexPath.row == 0) {
+            [cell.contentView addSubview:self.titleLbl];
+            [cell.contentView addSubview:self.user];
+            [cell.contentView addSubview:self.line];
+            [cell.contentView addSubview:self.imageView];
+        }
+        else if (indexPath.row == 1) {
+            [cell.contentView addSubview:self.myLbl];
+            [cell.contentView addSubview:self.displayLbl];
+        }
+        else {
+            [cell.contentView addSubview:self.name];
+            [cell.contentView addSubview:self.underline];
+            [cell.contentView addSubview:self.email];
+            [cell.contentView addSubview:self.dob];
+            [cell.contentView addSubview:self.address];
+            [cell.contentView addSubview:self.phone];
+            [cell.contentView addSubview:self.pass];
+        }
     }
     
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if(self.loadingFail)
+        return 1;
     return 3;
 }
 
