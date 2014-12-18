@@ -12,11 +12,8 @@ This is a programming challenge app. It loads random user with some of their per
 
 **DONE!**
 
-### Screenshot #1
-![Screenshot-1](http://s23.postimg.org/92vzfjrij/Photo_2014_12_16_4_44_17_PM.png)
-
-### Screenshot #2
-![Screenshot-2](http://s12.postimg.org/ste725y1p/Photo_2014_12_16_7_00_02_PM.png)
+### Screenshot
+![preview](http://s2.postimg.org/mzitunfd3/randomuser.gif)
 
 ### Authors and Contributors
 Just myself @jv17, I decided to this programming challenge for fun and maybe help others who are doing the same.
