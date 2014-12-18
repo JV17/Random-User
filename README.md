@@ -1,16 +1,25 @@
-#Random User - (Objective-C)
+### Random User - (Objective-C)
+This is a programming challenge app. It loads random user with some of their personal information like name, email, phone#, address, birthday and password which is provided from the https://randomuser.me/ API.
 
-This a simple app in objective-c which loads random users with their information and display it nicely. This is app was develop and tested in iOS8 and for iPhone 5+ devices.
+### Usage
+**1)** Download the zip file and extract it in your preferred folder.
 
-##Usage
-**1)** Download the zip file and extract it.
+**2)** Then, just open the project file located at Random-User/Random User.xcodeproj (double click on it).
 
-**2)** Then, just open the xcode project file Random-User/Random User.xcodeproj and run it.
+**3)** Xcode will be launched and load the project.
+
+**4)** Finally, just run the project. Something to keep in mind is that this project has been develop in iOS 8 for iPhone5+ devices.
 
 **DONE!**
 
-I hope it is helpful to others and, you find it interesting. Cheers!
+### Screenshot #1
+![Screenshot-1](http://s23.postimg.org/92vzfjrij/Photo_2014_12_16_4_44_17_PM.png)
 
-Don't forget to visit **[My Website!](http://jorgedeveloper.com)** and **[My Blog!](http://jorgedeveloper.com/blog/)**
+### Screenshot #2
+![Screenshot-2](http://s12.postimg.org/ste725y1p/Photo_2014_12_16_7_00_02_PM.png)
 
-####Thanks for visiting this repo and for more info on this repo [visit the repo website](http://jv17.github.io/Random-User/)...
+### Authors and Contributors
+Just myself @jv17, I decided to this programming challenge for fun and maybe help others who are doing the same.
+
+### Support or Contact
+Check out my website http://jorgedeveloper.com or contact me at jv17@github.com and I will be happy to help you.
